@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "524814009066",
+    "firebase_url": "https://hellomyfireb-75e77.firebaseio.com",
+    "project_id": "hellomyfireb-75e77",
+    "storage_bucket": "hellomyfireb-75e77.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:524814009066:android:28448718641c677f",
+        "android_client_info": {
+          "package_name": "com.example.hellomyfireb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "524814009066-g6moo0tmedvrkn0m5oq93e2p6ifr89mh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hellomyfireb",
+            "certificate_hash": "cf495b76dc9b1e1d33369d982d9172ff6b3d68f5"
+          }
+        },
+        {
+          "client_id": "524814009066-89o6vkvr7qstngda8jdjc9ansktrpc6c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDblFJxHm9Gny3MsXM6LboP5lWy-SISI3w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "524814009066-89o6vkvr7qstngda8jdjc9ansktrpc6c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
