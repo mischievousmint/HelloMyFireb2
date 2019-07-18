@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">HelloMyFireb</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner_ad_mint_id">ca-app-pub-8903979392580923~8244891801</string>
 </resources>

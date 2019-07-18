@@ -8,6 +8,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -20,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     EditText etFire;
     TextView tvFire;
     Button btnFire;
+    private AdView mAdView;
+    private InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +35,10 @@ public class MainActivity extends AppCompatActivity {
         tvFire = findViewById(R.id.tvFire);
         btnFire = findViewById(R.id.btnFire);
 
+        //Inicializar Admob
+        //MobileAds.initialize(this,getResources().getString(R.string.banner_ad_mint_id));
 
+        //Inicializar Database
         FirebaseApp.initializeApp(getApplicationContext());
 
         btnFire.setOnClickListener(new View.OnClickListener() {
@@ -42,6 +51,12 @@ public class MainActivity extends AppCompatActivity {
                 myRef.setValue(data);
 
                 tvFire.setText(data);
+
+                if (mInterstitialAd.isLoaded()) {
+                    mInterstitialAd.show();
+                } else {
+                    Log.d("TAG", "The interstitial wasn't loaded yet.");
+                }
             }
         });
 
@@ -69,5 +84,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        // Admob
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
+        //Intersection
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
     }
 }
